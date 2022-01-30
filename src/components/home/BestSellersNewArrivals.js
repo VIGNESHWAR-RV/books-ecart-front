@@ -117,7 +117,7 @@ function Books({ group }) {
     // border: "1.5px solid #ff8800",
     borderRadius: "2rem",
     transition: "all 0.3s ease-in-out",
-    ":hover": { width: "18vmax", background: "#ff8800" }
+    ":hover": { width: "16vmax", background: "#ff8800" }
   };
 
   return (
