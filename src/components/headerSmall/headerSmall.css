@@ -1,0 +1,9 @@
+#headerSmall{
+    display: none;
+}
+
+@media only screen and (max-width:940px ) {
+    #headerSmall{
+       display:block;
+    }        
+}

@@ -1,0 +1,10 @@
+
+
+@media only screen and (max-width:940px ) {
+    #categories{
+       display:none;
+    }        
+    #divideLine{
+        display:none;
+    }
+}
