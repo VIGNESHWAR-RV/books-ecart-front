@@ -1,5 +1,4 @@
 # _Quick Info_
----
 
 A simple E-commerce (book store) web application
 
@@ -7,7 +6,6 @@ A simple E-commerce (book store) web application
 #### _Back-end Repository Link_ [RV's E-Book Cart Backend](https://github.com/VIGNESHWAR-RV/books-eCart) 
 
 ## _List of Features_
----
 
 * Anonymous user account for Add Cart functionality
 
@@ -27,7 +25,6 @@ A simple E-commerce (book store) web application
 * STRIPE - Payment process
 
 ### _Upcoming Features_
----
 
 * Password-reset flow
 * Payment reesponse in Email
