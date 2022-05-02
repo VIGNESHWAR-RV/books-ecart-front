@@ -1,33 +1,30 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Button } from '@mui/material';
+// import Button from '@mui/material/Button';
+// import IconButton from '@mui/material/IconButton';
+import FreeBreakfastRoundedIcon from '@mui/icons-material/FreeBreakfastRounded';
+import FavoriteBorderTwoToneIcon from '@mui/icons-material/FavoriteBorderTwoTone';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 export function Footer() {
 
-  const supports = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "start",
-    margin: "0 1vw 0 0",
-    width: "15vw",
-  };
+  // const supports = {
+  //   display: "flex",
+  //   flexDirection: "column",
+  //   alignItems: "start",
+  //   margin: "0 1vw 0 0",
+  //   width: "15vw",
+  // };
 
   const buttonStyles = {
-    color: "#ff8800",
     transition: "all 0.3s ease-in-out",
-    fontSize:"1vmax",
-    ":hover": { background: "#ff8800", color: "white" }
+    ":hover": { background: "white", color: "#ff8800" }
   };
-
-  function scrollTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Button sx={{
+      {/* <Button sx={{
         width: "100%",
         height: "2rem"
       }}
@@ -35,8 +32,31 @@ export function Footer() {
         onClick={() => scrollTop()}
       >
         Back to top
-      </Button>
-      <Box sx={{
+      </Button> */}
+      <Box sx={{ height: "auto", background: "#ff8800",display:"flex" }}>
+           <Box>
+             <h2 style={{marginBottom:"0%"}}><i>Made with some Coffee and Craziness</i></h2>
+             <FreeBreakfastRoundedIcon sx={{fontSize:"2.6rem",m:1}}/>
+             <FavoriteBorderTwoToneIcon sx={{fontSize:"2.6rem",m:1}}/>
+           </Box>
+           <Box sx={{marginLeft:"auto",textAlign:"end"}}>
+             <h2 style={{marginBottom:"0%"}}><i>Lets improve the app with Knowledge sharing...</i></h2>
+             <Box sx={{mx:2,my:1,display:"flex",alignItems:"center",justifyContent:"end"}}>
+                <a style={{color:"white",textDecoration:"none",marginRight:"2%"}} title="LinkedIn/vigneshwar-rv" href="https://www.linkedin.com/in/vigneshwar-rv/" target="_blank" rel="noreferrer">
+                  <LinkedInIcon sx={{fontSize:"2.6rem",...buttonStyles,borderRadius:"0.5rem"}} />
+                </a>
+                 <a style={{color:"white",textDecoration:"none"}} title="GitHub-VIGNESHWAR-RV" href="https://github.com/VIGNESHWAR-RV" target="_blank" rel="noreferrer">
+                   <GitHubIcon sx={{fontSize:"2.4rem",...buttonStyles,borderRadius:"2rem"}} />
+                 </a>
+             </Box>
+           </Box>
+      </Box>
+    </Box>
+  );
+}
+
+// eslint-disable-next-line
+ {/* <Box sx={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
         justifyItems: "stretch",
@@ -74,7 +94,7 @@ export function Footer() {
         <Box sx={{ ...supports, width: "auto" }}>
           <h3>Follow Us</h3>
           <Box sx={{ display: "flex", paddingLeft: "1rem" }}>
-            <a href="#">
+            {/* <a href="#">
               <GitHubIcon sx={{
                 ...buttonStyles,
                 padding: "0 0.5rem",
@@ -89,15 +109,18 @@ export function Footer() {
                 fontSize: "2.5rem"
               }} />
             </a>
+
             <a href="#">
 
             </a>
+
             <a href="#">
 
             </a>
+
             <a href="#">
 
-            </a>
+            </a> 
           </Box>
         </Box>
       </Box>
@@ -107,10 +130,4 @@ export function Footer() {
         <b> Email</b> : <a style={buttonStyles} href="customerservice@RV.com">customerservice@RV.com</a> |
         <b> Phone#</b> : 123 -45678910
       </Box>
-      <hr />
-      <Box sx={{ height: "10rem", background: "#ff8800" }}>
-        this place is shoe security
-      </Box>
-    </Box>
-  );
-}
+      <hr /> */}

@@ -1,0 +1,50 @@
+
+#smallScreenFilter{
+    display:none;
+}
+
+@media only screen and (max-width:1280px){
+
+    #categories{
+        display:none;
+    }        
+    #divideLine{
+         display:none;
+    }
+    
+}
+
+@media only screen and (max-width:980px ) {
+    
+   #smallScreenFilter{
+        display:block;
+    }
+    .actions{
+        display: none;
+    }
+    .actionSkeleton{
+        display: none;
+    }
+    /* #smallScreenActions{
+        display: block;
+    } */
+}
+
+@media only screen and (max-width:500px){
+    /* .imageSkeleton{
+       width:20vw
+    }
+    .titleSkeleton{
+       width:40vw
+    }
+    .authorSkeleton{
+       width:30vw
+    } */
+    .bookImage{
+        min-width:30vw;
+    }
+    div .bookContainer{
+        margin:0%;
+        padding:0%;
+    }
+}

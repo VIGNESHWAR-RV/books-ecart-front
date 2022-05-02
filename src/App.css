@@ -2,6 +2,7 @@
 
 ::-webkit-scrollbar{
   width:0.5rem;
+  /* background:transparent; */
 }
 
 /* Foreground */
@@ -16,15 +17,68 @@
 }
 
 .styled-scrollbars{
-  scrollbar-color: #ff8800 transparent;
+  scrollbar-color: rgb(255, 136, 0) transparent;
 }
 #content{
   padding-top: 10rem;
 }
+#cartTotal{
+  font-size:xx-large;
+}
+
+#accountDetails{
+  font-size:larger;
+}
+
+.checkOutPriceBox{
+   font-size: medium;
+}
+
 @media only screen and (max-width:940px ) {
 
   #content{
       padding-top: 8.5rem;
   }
+  .signupAndloginOuterDiv{
+    overflow-y: scroll;
+  }
+  .signupAndlogin{
+     min-height:180vh;
+     flex-direction: column-reverse;
+     /* overflow-y: scroll; */
+  }
+  .signupDialog{
+    width:100%;
+    overflow-y: hidden;
+    min-height:110vh;
+  }
+  .loginDialog{
+     height:max-content;
+     min-width:100%;
+  }
+  #accountDetails{
+    font-size:large;
+  }
+  
 }
 
+@media only screen and (max-width:540px ) {
+
+  #cartTotal{
+    font-size: large;
+  }
+  #accountCartItemBox{
+    display: block;
+  }
+  #accountDetails{
+     font-size:0.75rem;
+  }
+  div .checkOutPriceBox{
+      font-size: 0.75rem;
+      margin: 1% 2%;
+  }
+  div .checkOutPriceOrderButton{
+      font-size: 0.6rem;
+      align-items: center;
+  }
+}

@@ -1,18 +1,13 @@
 
-#smallScreenFilter{
-    display:none;
-}
 
 @media only screen and (max-width:940px ) {
-    
-#smallScreenFilter{
-    display:block;
-}
-
     #categories{
        display:none;
     }        
     #divideLine{
         display:none;
+    }
+    .booksInSlider{
+       width:32vw;
     }
 }

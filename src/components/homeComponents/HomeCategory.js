@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
+import { useNavigate } from 'react-router-dom';
 
 export function HomeCategory({ name, count }) {
 
-const history = useHistory();
+const navigate = useNavigate();
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -13,7 +13,7 @@ const history = useHistory();
         color: "#ff8800",
         display: "grid",
         justifyContent: "start",
-        fontSize: " 1.15vh",
+        fontSize: "normal",
         margin: "0px 0px 10px 10px",
         transition: "all 0.3s ease-in-out",
         ":hover": {
@@ -21,7 +21,7 @@ const history = useHistory();
           color: "white",
         }
       }}
-      onClick={()=>history.push(`/${name}`)}
+      onClick={()=>navigate(`/${name}`)}
       >
         {name}
       </Button>

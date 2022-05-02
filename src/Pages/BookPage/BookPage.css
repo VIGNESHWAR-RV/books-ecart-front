@@ -1,0 +1,23 @@
+
+
+@media only screen and (max-width:850px ) {
+    
+   #specificBook{
+       display: grid;
+       justify-content: start;
+       margin: 0% 1%;
+   }
+   #specificBookInfo{
+       max-width: 95vw;
+   }
+   #additionalInfo{
+       margin-left: 1%;
+   }
+   #specificImageBox{
+       display: grid;
+       justify-items: center;
+   }
+   #specificBookImage{
+       width: 17rem;
+   }
+ }

@@ -1,7 +1,38 @@
+#bookImage:hover{
+    box-shadow: 1px 1px 10px 1px #ff8800 , -1px -1px 10px 1px #ff8800;
+}
+
+#showPriceHeading{
+    display: none;
+}
+
 @media only screen and (max-width:940px ) {
 
     #headerLarge{
         display:none;
-        
+    }
+}
+
+@media only screen and (max-width:800px ) {
+
+    #cartDialog{
+        grid-template-columns: 1fr;
+    }
+
+    #priceHeadingDialog{
+        display: none;
+    }
+
+    #showPriceHeading{
+        display: block;
+        margin-top: 8vmin;
+    }
+    #priceSectionDialog{
+        padding-top:0%;
+        margin-top: 0%;
+        margin-left: auto;
+    }
+    #imageBoxDialog{
+        display: block;
     }
 }
