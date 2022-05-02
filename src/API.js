@@ -1,2 +1,2 @@
 
-export const API = "http://localhost:9002/";
+export const API = "https://rv-cart-backend.herokuapp.com";
