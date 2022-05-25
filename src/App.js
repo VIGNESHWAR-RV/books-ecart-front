@@ -235,19 +235,12 @@ function App() {
 
   //--------------------------------------------------------------------------------------------------
 
-  // const [isPaymentMade,setIsPaymentMade] = useState(false);
 
-  // const handlePaymentMade=()=>{
-  //    setIsPaymentMade(prevState=>!prevState);
-  //    console.log(isPaymentMade);
-  // }
- 
-
-   const darkTheme = createTheme({
+  const darkTheme = createTheme({
     palette: {
       mode: (theme)?'dark' : "light",
     },
-   });
+  });
  
   const color = (theme)?"black":"whiteSmoke";
 

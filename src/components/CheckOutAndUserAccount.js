@@ -196,7 +196,7 @@ function Login({handleUpdateDialog}){
                      type:"password",
                      pattern:regex.password,
                      required:true,
-                     defaultValue:userLoggingIn.password,
+                     value:userLoggingIn.password,
                      placeholder:"Type Here",
                     //  helperText:"Enter your password here",
                      typing:handleChange,
@@ -207,18 +207,7 @@ function Login({handleUpdateDialog}){
                      sx:{fontSize:"1rem"} }
                       ];
 
-    
-    const handleSubmit = (e)=>{
-        e.preventDefault();
-        // !["employee","manager","admin"].includes(userLoggingIn.role) ||
-        // console.log(userLoggingIn);
-         if(
-            !new RegExp(regex.email).test(userLoggingIn.email) || 
-            !new RegExp(regex.password).test(userLoggingIn.password)){
-             return toast.error("please don't play with html elements ,in order to work properly");
-         }
-    
-        async function LoggingIn(){
+    async function loggingIn(userLoggingIn){
           setIsLoading(true);
           setIsDisabled(true);  
           const {email,password} = userLoggingIn;
@@ -245,11 +234,29 @@ function Login({handleUpdateDialog}){
           }else{
               return toast.error("Server error , please try again later");
           }
-        }
-        LoggingIn();
+    }
+    
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        // !["employee","manager","admin"].includes(userLoggingIn.role) ||
+        // console.log(userLoggingIn);
+         if(
+            !new RegExp(regex.email).test(userLoggingIn.email) || 
+            !new RegExp(regex.password).test(userLoggingIn.password)){
+             return toast.error("please don't play with html elements ,in order to work properly");
+         }
+    
+        
+        loggingIn(userLoggingIn);
 
     }
 
+    const handleDemoLogin = (e)=>{
+
+        // setUserLoggingIn(()=>{return {email:"demoaccount@ecart.com",password:"DemoAccount@123"}});
+        loggingIn({email:"demoaccount@ecart.com",password:"DemoAccount@123"});
+        
+    }
 
     return(
     <Box sx={{m:3,width:"90%"}}>
@@ -287,15 +294,16 @@ function Login({handleUpdateDialog}){
            ? <LinearProgress color="warning" sx={{mx:2,marginTop:"-4%",backgroundColor:"white",width:"94%"}} />
            :""}
        
-         {/* <Box sx={{display:"flex",flexDirection:"row",alignItems:"center"}}>
-             <p>New User?</p>
+         <Box sx={{display:"flex",flexDirection:"row",alignItems:"center"}}>
+             <p>Login with Demo Account</p>
              <Button sx={{ml:"auto"}} 
                      variant="contained"
-                     onClick={()=>setShowLogin(false)}
+                     disabled={isDisabled}
+                     onClick={handleDemoLogin}
                      color="warning">
-               SignUp
+                Demo Login
             </Button>
-         </Box> */}
+         </Box>
             
        </Box>
     </Box>
@@ -609,21 +617,17 @@ function CheckOut(){
 
     const navigate = useNavigate();
 
-    const { checkOutItems, cartItems , handleCheckOutDialogClose } = useContext(context);
-
-    // const { handlePaymentMade } = useContext(context);
+    const { checkOutItems, cartItems, handleCheckOutDialogClose } = useContext(context);
 
     const componentMounted = useRef(true);
 
     const [productsData , setProductsData] = useState("");
-
 
     const [totalPrice,setTotalPrice] = useState(0);
     const [checkOutPrice,setCheckOutPrice] = useState(0);
     const [discountedPrice,setDiscountedPrice] = useState(0);
 
     const [isLoading,setIsLoading] = useState(false);
-
 
     const getProductsData=async()=>{
      
@@ -694,6 +698,8 @@ function CheckOut(){
         }
         startPayment();
     }
+
+
 
     return(
         <>
