@@ -19,32 +19,32 @@ ReactDOM.render(
 
 // function Test(){
 
-//   async function test(){
+  // async function test(){
       
-//     console.log("Test 1");  // 1st 
+  //   console.log("Test 1");  // 1st 
 
-//     setTimeout(() => {
-//        console.log("test 2");   //4th
-//     }, 100);
+  //   setTimeout(() => {
+  //      console.log("test 2");   //4th
+  //   }, 100);
 
-//     const response = await fetch(API,{method:"GET"});
+  //   const response = await fetch(API,{method:"GET"});
 
-//     console.log("2.1");  // 2nd
+  //   console.log("2.1");  // 2nd
 
-//     if(response){
-//        console.log("Test 3");  // 3rd
-//     }
+  //   if(response){
+  //      console.log("Test 3");  // 3rd
+  //   }
 
-//     const data = await response.json();
+  //   const data = await response.json();
 
-//     if(data){
-//        console.log("Test 4");   //5th
-//     }
+  //   if(data){
+  //      console.log("Test 4");   //5th
+  //   }
 
-//     console.log("Test 5");   //6th
+  //   console.log("Test 5");   //6th
 
-//   };
-//   test();
+  // };
+  // test();
 
 
 //   return(

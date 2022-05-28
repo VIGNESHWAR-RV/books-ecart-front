@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 // import { Button } from '@mui/material';
 import {ProductSlider} from "../../components/homeComponents/ProductSlider";
+import Banner from "../../assets/cart banner.jpg";
 
 export function HomeContent({ bestSellers, newArrivals, awardWinners, staffPicks }) {
 
@@ -19,9 +20,10 @@ export function HomeContent({ bestSellers, newArrivals, awardWinners, staffPicks
           margin: "1% 20%",
           marginTop: "2rem",
           display: "grid",
-          placeItems: "center"
+          placeItems: "center",
+          overflow:"hidden"
         }}>
-        image grid
+        <img className="banner" src={Banner} alt="banner"></img>
 
       </Box>
 
